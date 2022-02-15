@@ -1,4 +1,4 @@
-pool: private
+pool: Default
 steps:
   - task: RunMATLABTests@0
     inputs:
