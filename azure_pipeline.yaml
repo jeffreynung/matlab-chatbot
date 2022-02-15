@@ -1,18 +1,9 @@
-pool: Default
+pool:
+  vmImage: Ubuntu 16.04
 steps:
-  - task: RunMATLABTests@0
+  - task: InstallMATLAB@0
     inputs:
-      testResultsPDF: test-results/results.pdf
-      testResultsJUnit: test-results/results.xml
-      codeCoverageCobertura: code-coverage/coverage.xml
-  - task: PublishBuildArtifacts@1
+      release: R2021a
+  - task: RunMATLABCommand@0
     inputs:
-      pathToPublish: test-results/results.pdf
-  - task: PublishTestResults@2
-    condition: succeededOrFailed()
-    inputs:
-      testResultsFiles: test-results/results.xml
-  - task: PublishCodeCoverageResults@1
-    inputs:
-      codeCoverageTool: Cobertura
-      summaryFileLocation: code-coverage/coverage.xml
+      command: chatbot_run_example
