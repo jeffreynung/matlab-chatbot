@@ -1,5 +1,5 @@
-%% 聊天機器人使用範例(中文)
-load('chatbot_lang_cht.mat')
+%% 聊天機器人使用範例(英文)
+load('chatbot_lang.mat')
 sents = "Whats up";
 disp(sents)
 
