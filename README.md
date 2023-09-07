@@ -42,4 +42,6 @@
 4. Statistics and Machine Learning Toolbox
 5. Parallel Computing Toolbox
 6. Python 3.8
-7. Jieba 
+7. Jieba
+
+**修改readme領先本機**
